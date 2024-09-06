@@ -1,0 +1,227 @@
+/* Main Navigation Bar */
+header {
+    background-color: #0e5a1e;
+    padding: 10px 20px;
+}
+
+.MainBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.MainBar-List {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.MainBar-List.left {
+    margin-left: 1px;
+}
+
+.MainBar-List.right {
+    margin-right: 1px;
+}
+
+.MainBar-List li {
+    margin: 0 15px;
+}
+
+.MainBar-List a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.MainBar-List a:hover {
+    color: #ddd;
+}
+
+.MainBar-List a i {
+    font-size: 20px;
+}
+
+/* Profile Section */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-section, .history-section, .requests-section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Section styles */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upper-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+}
+
+.new-request-btn-container {
+    margin-left: auto;
+}
+
+.new-request-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-request-btn:hover {
+    background-color: darkgreen;
+}
+
+/* Lower Level (Icons and Stats) */
+.lower-level {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    font-size: 14px;
+}
+
+.icon-and-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* spaec between icon and text */
+}
+
+.stat-item i {
+    font-size: 18px;
+    color: gray;
+}
+
+.stat-item p {
+    margin: 0;
+    color: gray;
+}
+
+.stat-item strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+/* history Section and Reqeust section */
+.history-section, .requests-section {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-header, .requests-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.history-header .header-left, .requests-header .header-left {
+    display: flex;
+    align-items: center;
+}
+
+.history-header i, .requests-header i {
+    margin-right: 10px;
+    color: #333;
+}
+
+.history-header p, .requests-header p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+/* Cards */
+.history-cards, .requests-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+

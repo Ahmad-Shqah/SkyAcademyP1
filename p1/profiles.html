@@ -1,0 +1,407 @@
+<!DOCTYPE html><!-- almost same as the two other pages , i puted the styles,scripts here for simpctey -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ahmad Abdulsalam">
+    <title>Vacation Requests</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/239008633a.js" crossorigin="anonymous"></script> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+    background-color: #055720; 
+    padding: 8px 18px;
+}
+.MainBar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.MainBar-List {
+    list-style: none;
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+}
+.MainBar-List.left {
+    margin-left: 1px;
+}
+.MainBar-List.right {
+    margin-right: 1px;
+}
+.MainBar-List li {
+    margin: 0 15px;
+}
+.MainBar-List a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.MainBar-List a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+        .CardsMainBox {
+            padding: 20px;
+        }
+
+        /* Card container using CSS Grid */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+            gap: 20px; /* Space between the cards */
+            justify-items: center; /* Center align the cards in their grid cells */
+        }
+
+        /*  card styles */
+        .card {
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #ffffff;
+            box-shadow: 1px 1px 5px rgba(117, 117, 117, 0.3);
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .card-content {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .decline-btn, .approve-btn {
+            border-radius: 8px;
+            padding: 5px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .approve-btn {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+
+        .decline-btn {
+            color: green;
+            background-color: white;
+            border: 2px solid green;
+        }
+
+        .decline-btn:hover, .approve-btn:hover {
+            opacity: 0.9;
+        }
+
+        /*  Styling */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            border: none;
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pagination button.active {
+            background-color: #0a5c0a;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .pagination button:hover {
+            background-color: #ddd;
+        }
+
+        .pagination button:disabled {
+            color: #aaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="MainBar">
+                <ul class="MainBar-List left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profiles.html">Profiles</a></li>
+                    <li><a href="">Reports</a></li>
+                    <li><a href="">Settings</a></li>
+                </ul>
+                <ul class="MainBar-List right">
+                    <li><a href=""><i class="fa-regular fa-bell"></i></a></li>
+                    <li><a href="profile.html"><i class="fa-regular fa-user"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+
+    <div class="CardsMainBox">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: inline-block; text-align: center; width: 25%;">
+                <i class="fa-solid fa-list fa-2x"></i>
+                <p style="margin: 0; display: inline-block; width: 75%;">Vacation Requests</p>
+            </div>
+            <div class="container" style="margin-top: 0; display: inline-block; text-align: right; width: 100%;">
+                <form class="d-flex justify-content-end">
+                    <input style="border-radius: 5cm; padding: 6px;" type="text" id="search-input" class="form-control" placeholder="Search">
+                </form>
+            </div>
+        </div>
+
+        <hr style="border: 1px solid #848484; margin: 5px;">
+
+        <!-- Cards for holiday requests -->
+        <div class="card-container">
+            
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>eyad ahmad</h5>
+                    <p><strong>Submitted On:</strong> September 5, 2024</p>
+                    <p><strong>Duration:</strong> 3 days</p>
+                    <p><strong>Salary:</strong> $300</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Mohmmad Ali</h5>
+                    <p><strong>Submitted On:</strong> September 7, 2024</p>
+                    <p><strong>Duration:</strong> 7 days</p>
+                    <p><strong>Salary:</strong> $700</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Ahmad Mahmud</h5>
+                    <p><strong>Submitted On:</strong> September 5, 2024</p>
+                    <p><strong>Duration:</strong> 10 days</p>
+                    <p><strong>Salary:</strong> $1000</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Qusai Majeed</h5>
+                    <p><strong>Submitted On:</strong> September 6, 2024</p>
+                    <p><strong>Duration:</strong> 5 days</p>
+                    <p><strong>Salary:</strong> $500</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Mahmud Ahmad</h5>
+                    <p><strong>Submitted On:</strong> September 7, 2024</p>
+                    <p><strong>Duration:</strong> 7 days</p>
+                    <p><strong>Salary:</strong> $700</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Majeed Qusai</h5>
+                    <p><strong>Submitted On:</strong> September 8, 2024</p>
+                    <p><strong>Duration:</strong> 8 days</p>
+                    <p><strong>Salary:</strong> $800</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Ahmad Qusai</h5>
+                    <p><strong>Submitted On:</strong> September 9, 2024</p>
+                    <p><strong>Duration:</strong> 6 days</p>
+                    <p><strong>Salary:</strong> $600</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Mahmud Majeed</h5>
+                    <p><strong>Submitted On:</strong> September 10, 2024</p>
+                    <p><strong>Duration:</strong> 9 days</p>
+                    <p><strong>Salary:</strong> $900</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Qusai Ahmad</h5>
+                    <p><strong>Submitted On:</strong> September 11, 2024</p>
+                    <p><strong>Duration:</strong> 4 days</p>
+                    <p><strong>Salary:</strong> $400</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Majeed Ahmad</h5>
+                    <p><strong>Submitted On:</strong> September 12, 2024</p>
+                    <p><strong>Duration:</strong> 11 days</p>
+                    <p><strong>Salary:</strong> $1100</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Mahmud Qusai</h5>
+                    <p><strong>Submitted On:</strong> September 13, 2024</p>
+                    <p><strong>Duration:</strong> 3 days</p>
+                    <p><strong>Salary:</strong> $300</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="req.png" alt="Employee Photo">
+                <div class="card-content">
+                    <h5>Majeed Qusai</h5>
+                    <p><strong>Submitted On:</strong> September 14, 2024</p>
+                    <p><strong>Duration:</strong> 12 days</p>
+                    <p><strong>Salary:</strong> $1200</p>
+                </div>
+                <div class="card-buttons">
+                    <button class="decline-btn" style=" border-radius: 8%; color: green; background-color: white; border-color: green; border-style: solid;">Decline</button>
+                    <button class="approve-btn" style="padding: 5px 10px; background-color: green; color: white; border: none; border-radius: 5px; margin-right: 10px;">Approve</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button  class="prev" >&lt;</button> <!-- Left arrow -->
+            <button class="page active">1</button>
+            <button  class="page">2</button>
+            <button class="page">3</button>
+            <button class="next">&gt;</button> <!-- Right arrow -->
+        </div>
+    </div>
+
+    <script>
+        //  search for card
+        document.getElementById('search-input').addEventListener('input', function() {
+            const searchValue = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.card-container .card');
+    
+            cards.forEach(function(card) {
+                const name = card.querySelector('h5').textContent.toLowerCase();
+                if (name.includes(searchValue)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    
+        //  hide cards when Approve or Decline 
+        const approveButtons = document.querySelectorAll('.approve-btn');
+        const declineButtons = document.querySelectorAll('.decline-btn');
+    
+        // Function to hide the card
+        function hideCard(event) {
+            const card = event.target.closest('.card'); // Find the closest card element
+            card.style.display = 'none'; // Hide the card
+        }
+    
+        // to approve buttons
+        approveButtons.forEach(button => {
+            button.addEventListener('click', hideCard);
+        });
+    
+        //  to decline buttons
+        declineButtons.forEach(button => {
+            button.addEventListener('click', hideCard);
+        });
+    </script>
+    
+</body>
+</html>
